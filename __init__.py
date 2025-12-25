@@ -2,6 +2,7 @@ import json
 import numpy as np
 from typing import List, Tuple
 import torch
+from .loading_nodes import LoadVideoFromFolder, LoadImageFromFolder
 
 class CalculatorNode:
     @classmethod
@@ -171,9 +172,13 @@ class CondVideoPointTracksVisualize:
 NODE_CLASS_MAPPINGS = {
     "CalculatorNode": CalculatorNode,
     "CondVideoPointTracksVisualize": CondVideoPointTracksVisualize,
+    "LoadVideoFromFolder": LoadVideoFromFolder,
+    "LoadImageFromFolder": LoadImageFromFolder,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "CalculatorNode": "Basic Calculator",
-    "CondVideoPointTracksVisualize": "Point Tracks to Video"
+    "CondVideoPointTracksVisualize": "Point Tracks to Video",
+    "LoadVideoFromFolder": "Load Video (Folder) 🎥🅥🅗🅢",
+    "LoadImageFromFolder": "Load Images (Folder) 🎥🅥🅗🅢",
 }
